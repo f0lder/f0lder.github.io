@@ -558,3 +558,23 @@ body{
     height: 100px;
     opacity: 0.5;
 }
+.p1 {
+  padding: 3em;
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  position: sticky;
+  color: white;
+}
+.boxx{
+  background: #111111;
+	display: inline-block;
+	transition: transform 2000ms ease;
+  position: sticky;
+  top: 50%;
+  bottom: 50%;
+}
+.fill{
+  font-size: 90px;
+  position: relative;
+  align-content: inherit;
+}
