@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Khula:700);
 body {
-  background: #111;
+  background: #111111;
 }
 .hidden {
   opacity:0;
@@ -28,22 +28,22 @@ body {
   left:10px;
 }
 a:link {
-  color:#111;
+  color:#111111;
   background-color: transparent;
   text-decoration: none;
 }
 a:visited {
-  color:#111;
+  color:#111111;
   background-color: transparent;
   text-decoration: none;
 }
 a:hover {
-  color:#111;
+  color:#111111;
   background-color: transparent;
   text-decoration: none;
 }
 a:active {
-  color:#111;
+  color:#111111;
   background-color: transparent;
   text-decoration: none;
 }
