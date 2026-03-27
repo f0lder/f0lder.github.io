@@ -77,37 +77,14 @@
         0 0 40px rgba(250, 217, 217, 0.2);
     }
 
-    #tooltip {
-      position: fixed;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #fff;
-      padding: 4px 12px;
-      border-radius: 6px;
-      font-size: 0.75em;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      opacity: 0;
-      transform: translateY(4px);
-      transition: opacity 0.25s, transform 0.25s;
-      pointer-events: none;
-      z-index: 20;
-    }
-
-    #tooltip.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 
 <body>
 
   <canvas id="bg"></canvas>
-  <div id="tooltip">Copied!</div>
-
   <main>
-    <p>Just go to <a href="https://f0lder.xyz" id="link">my portfolio</a>.</p>
+    <p>Just go to <a href="https://f0lder.xyz">my portfolio</a>.</p>
   </main>
 
   <script>
@@ -175,23 +152,6 @@
         dot.style.transform = 'translate(-50%,-50%) scale(0)';
       });
       setTimeout(() => { dot.remove(); trail.splice(trail.indexOf(dot), 1); }, 500);
-    });
-
-    // --- Click to copy + navigate ---
-    const link = document.getElementById('link');
-    const tooltip = document.getElementById('tooltip');
-    let tooltipTimer;
-
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      navigator.clipboard.writeText('https://f0lder.xyz').then(() => {
-        tooltip.style.left = e.clientX + 14 + 'px';
-        tooltip.style.top  = e.clientY - 36 + 'px';
-        tooltip.classList.add('show');
-        clearTimeout(tooltipTimer);
-        tooltipTimer = setTimeout(() => tooltip.classList.remove('show'), 1400);
-      });
-      setTimeout(() => { location.href = 'https://f0lder.xyz'; }, 600);
     });
 
     // --- Keyboard shortcut: Enter or Space ---
